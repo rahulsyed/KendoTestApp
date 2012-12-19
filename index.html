@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <link href="css/kendo.mobile.all.min.css" rel="stylesheet" />
+	<script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+	<div data-role="view" id="home" data-layout="default">
+		Hello Mobile World!
+    </div>
+	<div data-role="view" id="about" data-layout="default">
+		All About My App
+    </div>
+   <section data-role="layout" data-id="default">
+        <header data-role="header">
+            <div data-role="navbar" data-theme="b">My App</div>
+        </header>
+        <!--View content will render here-->
+        <footer data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#home">Home</a>   
+				<a href="#about">About</a> 		
+				<a href="#">Contact</a> 	
+				<a href="#">Map</a> 					
+            </div> 
+        </footer>
+    </section>
+	<script>
+		var app = new kendo.mobile.Application(document.body, 
+		{
+			transition:'slide'
+		});
+	</script>
+</body>
+</html>
